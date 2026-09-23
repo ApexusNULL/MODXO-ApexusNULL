@@ -1,0 +1,23 @@
+MODXO ApexusNULL - complete community project
+
+BOARD
+Two copper layers, FR4, 1.6 mm nominal finished thickness, 1 oz outer copper, LEADED HASL finish, black solder mask and white silkscreen. Overall envelope is 36.6 x 36.6 mm; the stepped Gerber contour is authoritative. Gerber geometry and drills are unchanged from the corrected prototype. Gerber job thickness metadata is 1.6 mm; its unspecified finish is superseded by the LEADED HASL requirement here.
+
+COMPLETE ASSEMBLY
+Fit all 51 components in the BOM: 50 on top and J_LPC on the bottom. There are 26 unique MPNs. BOM quantities are per complete board.
+J_LPC is the Harwin M20-7830842 female 2x8 through-hole LPC socket and is INCLUDED in this complete project BOM and placement file. Install and solder it underneath with the orientation shown in the bottom assembly and pin-detail drawings.
+J_USB remains on top; solder its four plated through-hole shell joints as well as its electrical contacts. PAD_D0, PAD_HDD and PAD_LAN are bare PCB contacts and are not fitted components.
+Use the exact selected MPNs. Confirm alternatives before substitution. Coordinates are millimetres, native KiCad absolute origin, +X right and exported +Y up. Rotations use KiCad conventions. J_LPC's coordinate is its footprint anchor, not its body centre. Use assembly and pin-detail drawings for polarity and orientation.
+
+FILES
+Use MODXO_ApexusNULL_Community_Gerbers.zip for fabrication. The BOM XLSX/CSV and Pick_and_Place CSV describe complete assembly. Drawings include both assembly sides, pin details, schematic and 3D references. 3D bodies for USB/BOOT are visual proxies, not procurement specifications. Verify USB shell-tab engagement on the 1.6 mm board and the BOOT switch land pattern before multiple assemblies. Accessory-harness compatibility remains unverified.
+
+SOURCING
+Supplier links, ordering identifiers and dated availability are in the BOM, checked 2026-09-23. Reconfirm stock at quote. SW_BOOT / ST-1185S was unavailable at its linked source; obtain an exact-part quote before assembly. RN / MNR04M0APJ101 uses a CoreStaff catalog product ID; confirm the actual ordering code at quote. Supplier minimums and assembly attrition may require additional parts.
+
+FABRICATION
+Minimum track 0.127 mm, copper clearance 0.10 mm, copper-to-edge 0.25 mm, via diameter 0.45 mm and via drill 0.20 mm. Plated and non-plated drills are separate. USB shell slots are plated. No controlled-impedance stackup is claimed.
+
+PROTOTYPE STATUS AND PROGRAMMING
+This is an untested hardware reconstruction. Native clearance/connectivity and circuit checks passed; physical boot, USB waveform and thermal testing have not been performed. Identified part-selection and interface qualifications remain noted in the BOM.
+Firmware is separate in MODXO_ApexusNULL_Firmware.zip. The Modxo UF2 alone contains no BIOS or PrometheOS image. A working programmed assembly requires the separately obtained YD-RP2040 PrometheOS/BIOS stage followed by the supplied MINI-V6-compatible Modxo stage. Program over USB with Xbox and accessories disconnected. Do not substitute an ordinary Pico or Tiny/Zero pin-map image.
